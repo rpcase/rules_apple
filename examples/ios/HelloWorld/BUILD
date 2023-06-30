@@ -5,8 +5,14 @@ load(
     "//apple:versioning.bzl",
     "apple_bundle_version",
 )
+load("//apple:resources.bzl", "apple_resource_bundle")
 
 licenses(["notice"])
+
+apple_resource_bundle(
+    name = "resources",
+    resources = ["Resources/shaders.metal"],
+)
 
 objc_library(
     name = "Sources",
@@ -17,6 +23,7 @@ objc_library(
     ],
     data = [
         "Resources/Main.storyboard",
+        ":resources"
     ],
 )
 
