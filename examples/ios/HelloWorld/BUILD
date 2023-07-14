@@ -11,7 +11,7 @@ licenses(["notice"])
 
 apple_resource_bundle(
     name = "resources",
-    resources = ["Resources/shaders.metal"],
+    resources = ["Resources/shaders.metal", "//examples/resources:shader_defines.h"]
 )
 
 objc_library(

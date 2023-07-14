@@ -27,3 +27,7 @@ filegroup(
     name = "WatchAppIcon.xcassets",
     srcs = glob(["WatchAppIcon.xcassets/**"]),
 )
+
+exports_files(
+    ["shader_defines.h"]
+)
